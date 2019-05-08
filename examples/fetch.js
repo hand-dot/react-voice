@@ -18,6 +18,7 @@ class App extends React.Component {
     fetch(URL)
       .then(res => res.json())
       .then(json => {
+        // const _json = json.filter(j => j.types.includes("ひこう"));
         this.setState({ pokemonNames: json.map(j => j.name) });
       });
   }
